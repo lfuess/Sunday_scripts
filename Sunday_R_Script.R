@@ -25,6 +25,6 @@ gap.in %>%
 
 gap.in %>%
   filter(year < 1990) %>%
-  select(continent, country, year, pop) %>%
-  group_by(continent) %>%
+  select(continent, year, pop) %>%
+  group_by(continent, year) %>%
   summarize(mean = mean(pop))
